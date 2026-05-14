@@ -3,6 +3,12 @@ from datetime import datetime
 import pyttsx3
 import webbrowser
 import os
+import customtkinter as ctk
+from datetime import datetime
+import pyttsx3
+import webbrowser
+import os
+import speech_recognition as sr
 
 # ---------------- VOICE ENGINE ----------------
 engine = pyttsx3.init()
@@ -78,6 +84,21 @@ status = ctk.CTkLabel(
     font=("Arial", 16, "bold")
 )
 status.pack(pady=5)
+new_chat_btn = ctk.CTkButton(
+    sidebar,
+    text="New Chat",
+    height=45,
+    corner_radius=12
+)
+new_chat_btn.pack(padx=20, pady=20)
+
+settings_btn = ctk.CTkButton(
+    sidebar,
+    text="Settings",
+    height=45,
+    corner_radius=12
+)
+settings_btn.pack(padx=20, pady=10)
 
 # ---------------- MAIN AREA ----------------
 main_frame = ctk.CTkFrame(app)
@@ -160,3 +181,41 @@ app.bind("<Return>", lambda event: send_message())
 
 # ---------------- RUN APP ----------------
 app.mainloop()
+
+def listen():
+
+    recognizer = sr.Recognizer()
+
+    with sr.Microphone() as source:
+
+        chat_box.insert("end", "🎤 Listening...\n")
+        chat_box.see("end")
+
+        recognizer.adjust_for_ambient_noise(source)
+
+        audio = recognizer.listen(source)
+
+    try:
+
+        command = recognizer.recognize_google(audio)
+
+        chat_box.insert(
+            "end",
+            f"🧑 You (Voice): {command}\n"
+        )
+
+        response = ai_reply(command)
+
+        chat_box.insert(
+            "end",
+            f"🤖 NovaAI: {response}\n\n"
+        )
+
+        speak(response)
+
+    except:
+
+        chat_box.insert(
+            "end",
+            "🤖 NovaAI: Sorry, I could not understand.\n\n"
+        )
