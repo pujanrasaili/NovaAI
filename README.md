@@ -61,8 +61,8 @@ Modern futuristic AI desktop assistant with:
 Voice interaction
 Smart commands
 Desktop control
-👨‍💻 Creator
 
-Pujan Rasaili
+## 👨‍💻 Author
+**Pujan Rasaili**
 
 GitHub:https://github.com/pujanrasaili
