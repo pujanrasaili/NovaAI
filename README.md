@@ -1,21 +1,21 @@
-# NovaAI 🤖
+# NovaAI
 
 NovaAI is a modern AI-powered desktop assistant built using Python and CustomTkinter.
 
-## ✨ Features
+## Features
 
-- 🎨 Modern dark UI
-- 💬 Chat-based assistant
-- 🎤 Voice command support
-- 🔊 Text-to-speech replies
-- 🌐 Open websites instantly
-- 🖥 Launch VS Code from commands
-- ⌨ Enter key support
-- ⚡ Fast and lightweight
+-  Modern dark UI
+-  Chat-based assistant
+-  Voice command support
+-  Text-to-speech replies
+-  Open websites instantly
+-  Launch VS Code from commands
+-  Enter key support
+-  Fast and lightweight
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python
 - CustomTkinter
@@ -24,7 +24,7 @@ NovaAI is a modern AI-powered desktop assistant built using Python and CustomTki
 
 ---
 
-## 🚀 Commands
+## Commands
 
 Example commands:
 
@@ -36,7 +36,7 @@ open google
 open github
 open vscode
 
-📂 Project Structure
+ Project Structure
 NovaAI/
 │
 ├── src/
@@ -54,7 +54,7 @@ pip install customtkinter pyttsx3 SpeechRecognition pyaudio
 Run app:
 
 python src/main.py
-📸 Preview
+Preview
 
 Modern futuristic AI desktop assistant with:
 
@@ -62,7 +62,7 @@ Voice interaction
 Smart commands
 Desktop control
 
-## 👨‍💻 Author
+## Author
 **Pujan Rasaili**
 
 GitHub:https://github.com/pujanrasaili
